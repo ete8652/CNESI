@@ -1,0 +1,67 @@
+//
+//  PrefixHeader.pch
+//  NewProjects
+//
+//  Created by feijiu_1 on 2017/12/7.
+//  Copyright © 2017年 DSOperation. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define NSUSE_DEFO [NSUserDefaults standardUserDefaults]
+#define ScreenWidth ([UIScreen mainScreen].bounds.size.width)
+#define ScreenHeight ([UIScreen mainScreen].bounds.size.height)
+#define WINDOW [[[UIApplication sharedApplication] delegate] window]
+#define kDevice_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define Statusbar_Height   [[UIApplication sharedApplication] statusBarFrame].size.height
+#define Navigationbar_Height [[UINavigationController alloc]init].navigationBar.frame.size.height
+#define Distance_Top        Statusbar_Height+Navigationbar_Height
+#define Tabbar_Height [[UITabBarController alloc]init].tabBar.frame.size.height
+/*
+ 域名
+ */
+
+#define API_key @"appen"
+#define API_pass @"appen"
+#define Main_URL @"http://111.198.24.20:8603/jsonapi/"
+
+
+
+/*
+  category
+ */
+#import "UIColor+ColorChange.h"
+#import "UITextField+PlaceholderColor.h"
+#import "UIButton+SGImagePosition.h"
+#import "API_Name.h"
+
+/*
+ 颜色值 RGB(166, 13, 24)
+ */
+#define RGB(x, y, z) [UIColor colorWithRed:x/255.0 green:y/255.0 blue:z/255.0 alpha:1.0]
+#define BG_COLOR  RGB(239,239,239)
+#define Main_Color RGB(166, 14, 22)
+
+/*
+ 第三方
+ */
+#import "SDAutoLayout.h"
+#import "LCProgressHUD.h"
+#import "AFNetworking.h"
+#import "UIButton+WebCache.h"//按钮加载url
+#import "UIImageView+WebCache.h"//图片加载url
+#import "MJExtension.h"
+#import "MJRefresh.h"
+/*
+ 工具
+ */
+#import "Engine.h"
+#import "ToolClass.h"
+#import <Foundation/Foundation.h>
+#import "Singleton.h"
+
+
+
+
+#endif /* PrefixHeader_pch */
